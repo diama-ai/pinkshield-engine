@@ -1,20 +1,26 @@
-PinkShield Ultra-SaaS Engine V13.0
+PinkShield Ultra-SaaS Vault API
+
+
+
 
 🚀 Description
-PinkShield Ultra-SaaS Engine is an advanced image analysis engine based on the Swin-B model trained on ImageNet. It provides image classification along with Grad-CAM visualization to highlight areas relevant for predictions. Designed for GPU and CPU, it supports images up to 10 MB in size and formats JPEG, PNG, and WebP.
 
-Main Features
+PinkShield Ultra-SaaS Vault API is a high-performance SaaS engine for secure management and processing of DICOM files. It provides asynchronous uploads, resilient storage to AWS S3, and dispatch to SQS for integration with downstream analysis pipelines.
 
-High-accuracy image analysis using Swin-B.
+Optimized for SaaS environments, it minimizes memory usage and handles large file uploads efficiently using streaming.
 
-Grad-CAM heatmap generation for interpretability.
+🔹 Key Features
 
-Asynchronous API compatible with FastAPI / Python.
+Fast DICOM validation without loading the full image into memory.
 
-Multi-thread support for CPU and GPU acceleration via PyTorch.
+Modality check (MG for mammography) and essential DICOM tag extraction.
 
-Health-check endpoints for monitoring.
+Streaming multipart upload to S3 with continuous SHA256 hash calculation.
 
-Optimized memory usage and latency for SaaS environments
+Asynchronous dispatch to SQS with retries and resilience (Tenacity).
 
-my github techno : https://github.com/KilianDiama/
+FastAPI background tasks for non-blocking pipelines.
+
+Optimized for CPU and cloud SaaS environments (low memory, high throughput).
+
+Structured logging with structlog for traceability.
